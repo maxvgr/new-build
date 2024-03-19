@@ -6,13 +6,12 @@
 
 Клонируем репозиторий себе на компьютер:
 ```sh
-git clone https://github.com/acr0matic/boilerplate
 git clone https://github.com/maxvgr/new-build
 ```
 
 Переходим в каталог с проектом:
 ```sh
-cd boilerplate
+cd new-build
 ```
 
 Установливаем все зависимости командой:
@@ -46,7 +45,7 @@ gulp deploy
 ## Файловая структура
 
 ```
-boilerplate
+new-build
 ├── dist
 ├── gulp_tasks
 ├── src
