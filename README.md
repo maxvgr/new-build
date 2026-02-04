@@ -22,13 +22,13 @@
 Клонируем репозиторий себе на компьютер:
 
 ```sh
-git clone https://github.com/acr0matic/frontend-reborn
+git clone https://github.com/maxvgr/new-build.git
 ```
 
 Переходим в каталог с проектом:
 
 ```sh
-cd frontend-reborn
+cd new-build
 ```
 
 Устанавливаем все зависимости командой:
