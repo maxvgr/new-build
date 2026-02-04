@@ -1,36 +1,38 @@
 {
   "env": {
+    "es2024": true,
     "browser": true,
     "commonjs": true,
-    "es6": true,
-    "node": true
+    "jquery": true
   },
-  "plugins": [
-    "sonarjs",
-    "promise"
-  ],
   "extends": [
-    "plugin:sonarjs/recommended",
-    "plugin:promise/recommended"
+    "standard",
+    "plugin:unicorn/recommended"
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "ecmaVersion": 6
-  },
+  "plugins": [
+    "unicorn"
+  ],
   "ignorePatterns": [
-    "gulpfile.js",
-    "**/gulp_tasks/*.js",
-    "**/src/assets/scripts/libraries/*.js",
-    "**/src/assets/scripts/polyfills/*.js"
+    "node_scripts/",
+    "src/js/libs/",
+    "webpack.config.js",
+    "gulp_tasks/",
+    "gulpfile.js"
   ],
   "rules": {
+    "no-unused-vars": "off",
+    "no-new": "off",
+    "quotes": "off",
+    "comma-dangle": "off",
+    "eol-last": "off",
+    "no-multiple-empty-lines": "off",
     "semi": [
       "error",
       "always"
-    ]
+    ],
+    "space-before-function-paren": "off",
+    "brace-style": 0,
+    "unicorn/no-empty-file": "off",
+    "unicorn/prevent-abbreviations": "off"
   }
 }

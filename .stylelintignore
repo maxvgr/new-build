@@ -1,9 +1,4 @@
-src/temp/*.css
-src/temp/*.js
-src/assets/scss/lagacy/**/*.scss
-src/assets/scss/vendors/**/*.scss
-src/assets/scss/core/**/*.scss
-src/assets/scss/base/_reset.scss
-src/assets/scss/base/_normalize.scss
-src/assets/scripts/libraries/*.js
-dist/**/*.css
+/dist
+/src/scss/_old.scss
+/src/scss/base/_normalize.scss
+/src/scss/vendors/include/

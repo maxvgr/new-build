@@ -1,32 +1,22 @@
 const path = require('../gulpfile');
+const { task, src, series, dest } = require('gulp');
 
-const { series, task, src, dest } = require('gulp');
-
-const webpack = require('webpack-stream');
-const webpackConfig = require("../webpack.config.js");
+const del = require('del');
+const replace = require('gulp-replace');
 
 /*
-- Объединение всех файлов скриптов в один
-- Задача конвертации синтаксиса ES2016+ в старый формат
-- Минификация кода
-- Переименовывание выходного файла
+- Прегенерация описания для темы Wordpress
+- Смена путей ассетов
 */
 
-task('compile_js', () => {
-  webpackConfig.mode = 'production';
-  webpackConfig.devtool = 'source-map';
-  webpackConfig.output.filename = "bundle.min.js";
-  webpackConfig.watch = false;
+task('js', () => src(path.scripts.folder.build + path.scripts.name)
+  .pipe(dest(path.scripts.folder.theme)));
 
-  return src(path.script.entry)
-    .pipe(webpack(require('../webpack.config.js')))
-    .pipe(dest(path.script.dest))
-});
-
-task('libraries_js', () => {
-  return src(path.script.libraries)
-    .pipe(dest(path.script.dest + 'libraries/'))
-});
+task('clean_js', () => del(path.scripts.folder.build));
 
 task('scripts',
-  series('compile_js', 'libraries_js'));
+  series(
+    'js',
+    'clean_js',
+  ),
+);
