@@ -22,7 +22,7 @@
 Клонируем репозиторий себе на компьютер:
 
 ```sh
-git clone https://github.com/maxvgr/new-build.git
+git clone https://github.com/maxvgr/new-build
 ```
 
 Переходим в каталог с проектом:

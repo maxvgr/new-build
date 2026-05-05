@@ -17,9 +17,7 @@ import './layout/menu';
 
 import './layout/page/home';
 
-import './component/accordion';
 import './component/form';
-import './component/submenu';
 import './component/input';
 // import './component/gallery';
 // import './component/select';
