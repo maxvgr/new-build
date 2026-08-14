@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /* Ядро медиа-запросов */
 @import "abstracts/functions/breakpoint";
 @import "vendors/include/scss-libs/sass-mq/sass-mq";
@@ -29,12 +31,6 @@
 @import "layout/global/footer";
 @import "layout/global/mobile-menu";
 @import "layout/global/section";
-
-/* Стили для узконаправленных тегов */
-@import "layout/misc/image";
-@import "layout/misc/link";
-@import "layout/misc/logo";
-@import "layout/misc/media-wrapper";
 
 /* Стили для повторяющихся блоков */
 @import "layout/partials/main";
